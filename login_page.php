@@ -36,7 +36,7 @@ $conn->close();
 </head>
 
 <body>
-<img src="image/logom(1).png" alt="Logo" class="logo">
+<img src="image/logol.png" alt="Logo" class="logo">
     
     <form method="post" action="login_page.php">
     <h2>Login</h2>
