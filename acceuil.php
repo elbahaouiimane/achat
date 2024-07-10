@@ -15,7 +15,7 @@ if (!isset($_SESSION['username'])) {
     <title>Achats</title>
 </head>
 <body>
-    <h2>Welcome to the purchase and invoice management system <?php echo htmlspecialchars($_SESSION['username']); ?></h2>
+    <h2>Welcome to the purchase and invoice section <?php echo htmlspecialchars($_SESSION['username']); ?></h2>
     <a href="logout.php">Se déconnecter</a>
 </body>
 </html>
