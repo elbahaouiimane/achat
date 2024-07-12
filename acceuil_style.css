@@ -1,0 +1,153 @@
+body {
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 20px;
+}
+.logo {
+    width: 200px; /* Largeur du logo */
+    height: auto; /* Hauteur automatique pour maintenir les proportions */
+    position: absolute; /* Position absolue par rapport au coin supérieur gauche du viewport */
+    top: 30px; /* Décalage du haut */
+    left: 20px; /* Décalage de la gauche */
+    z-index: 1000; 
+}
+
+
+h1 {
+    color: #000;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-align: center;
+  
+}
+
+table {
+    margin-top: 20px;
+}
+
+th {
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+}
+
+td {
+    background-color: #fff;
+    text-align: center;
+}
+select {
+    width: 40%; /* Prend la moitié de la largeur */
+    padding: 4px; /* Réduit l'espace intérieur */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    font-size: 14px;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; /* Réduit la taille de la police */
+    color: #333;
+    transition: border-color 0.3s;
+    font-weight: bold;
+}
+
+select:hover {
+    border-color: #888;
+}
+
+select:focus {
+    border-color: #000;
+    outline: none;
+}
+
+button {
+    background-color: #000;
+    color: #fff;
+    border: none;
+    padding: 7px 20px;
+    border-radius: 5px;
+    font-size: 15px;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.1s;
+    font-weight: bold;
+}
+
+button.add {
+    background-color: green; /* Gris */
+}
+
+button.add:hover {
+    background-color: #48894b; /* Gris plus foncé au survol */
+}
+
+/* Style pour le bouton Supprimer */
+button.delete {
+    background-color: rgb(228, 30, 30); 
+    width: 50%;/* Rouge */
+    padding-top:3px;
+    padding-bottom:5px;
+
+}
+
+button.delete:hover {
+    background-color: rgb(152, 50, 50); /* Rouge plus foncé au survol */
+}
+#fournisseur {
+    width: 12%;
+}
+button.validate {
+    background-color:rgb(13, 13, 87);
+    
+    
+}
+button.validate:hover{
+    background-color:rgb(21, 21, 105);
+}
+/* */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th {
+    background-color: #000;
+    color: #fff;
+    padding: 10px;
+}
+
+td {
+    background-color: #f9f9f9;
+    border: 1px solid transparent; /* Pas de bordure visible */
+    padding: 8px;
+}
+
+tr:nth-child(even) td {
+    background-color: #f1f1f1; /* Couleur alternée */
+}
+
+tr:hover td {
+    background-color: #e9e9e9; /* Couleur au survol */
+}
+/* */
+td input[type="number"] {
+    width: 10%; /* Ajustez la largeur selon vos besoins */
+    padding: 5px; /* Espace intérieur */
+    border: 1px solid #ccc; /* Bordure */
+    border-radius: 5px; /* Coins arrondis */
+    background-color: #f9f9f9; /* Couleur de fond */
+    font-size: 14px; /* Taille de la police */
+    color: #333; /* Couleur du texte */
+    text-align: center; /* Centre le texte */
+    transition: border-color 0.3s; /* Transition pour le changement de bordure */
+}
+
+td input[type="number"]:hover {
+    border-color: #888; /* Couleur de la bordure au survol */
+}
+
+td input[type="number"]:focus {
+    border-color: #000; /* Couleur de la bordure au focus */
+    outline: none; /* Enlève le contour par défaut */
+}
+label{
+    font-weight: bold;
+}
