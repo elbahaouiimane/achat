@@ -1,6 +1,7 @@
 <?php
 session_start();
 require_once('config.php');
+require_once('api_functions.php');
 
 if (!isset($_SESSION['username'])) {
     header("Location: login_page.php");
@@ -31,6 +32,7 @@ if (!isset($_SESSION['articles'])) {
                         <option value="2">Item B afficher par sap</option>
                     </select>
                 </td>
+                 <td>Wh sap</td> 
                 <td>prix fixe afficher par sap</td>
                 <td><input type="number" name="quantite[]" min="1" /></td>
                 <td>afficher par sap</td>
@@ -63,6 +65,7 @@ if (!isset($_SESSION['articles'])) {
         <thead>
             <tr>
                 <th>Product</th>
+                <th>Warehouse</th>
                 <th>Unit price</th>
                 <th>Quantity</th>
                 <th>Gross total</th>
@@ -79,6 +82,7 @@ if (!isset($_SESSION['articles'])) {
                         <option value="2">Item B afficher par sap</option>
                     </select>
                 </td>
+                <td><?= $article['warehouse'] ?></td>
                 <td><?= $article['price'] ?></td>
                 <td><input type="number" name="quantite[]" min="1" /></td>
                 <td>calculer ici</td>
@@ -103,7 +107,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $_SESSION['articles'][] = [
                 'id' => $article,
                 'name' => "Article " . $article, // Remplacez par la vraie logique
-                'price' => $index == 0 ? 10 : 15 // Exemple de prix
+                'price' => $index == 0 ? 10 : 15,
+                'warehouse' => "Warehouse " . ($index + 1)
             ];
         }
     }

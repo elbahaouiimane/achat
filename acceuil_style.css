@@ -23,20 +23,23 @@ h1 {
 
 table {
     margin-top: 20px;
+   
 }
 
 th {
     background-color: #000;
     color: #fff;
     text-align: center;
+  
 }
 
 td {
     background-color: #fff;
     text-align: center;
+   
 }
 select {
-    width: 40%; /* Prend la moitié de la largeur */
+    width: 45%; /* Prend la moitié de la largeur */
     padding: 4px; /* Réduit l'espace intérieur */
     border: 1px solid #ccc;
     border-radius: 5px;
@@ -81,9 +84,11 @@ button.add:hover {
 /* Style pour le bouton Supprimer */
 button.delete {
     background-color: rgb(228, 30, 30); 
-    width: 50%;/* Rouge */
+    width: 60%;/* Rouge */
     padding-top:3px;
     padding-bottom:5px;
+  
+   
 
 }
 
@@ -129,7 +134,7 @@ tr:hover td {
 }
 /* */
 td input[type="number"] {
-    width: 10%; /* Ajustez la largeur selon vos besoins */
+    width: 13%; /* Ajustez la largeur selon vos besoins */
     padding: 5px; /* Espace intérieur */
     border: 1px solid #ccc; /* Bordure */
     border-radius: 5px; /* Coins arrondis */
