@@ -42,8 +42,11 @@ if (!isset($_SESSION['articles'])) {
 
         function removeProductRow(button) {
             const row = button.parentNode.parentNode;
+            const confirmation = confirm("Are you sure you want to delete this item?");
+    if (confirmation) {
             row.parentNode.removeChild(row);
         }
+    }
     </script>
 </head>
 <body>
