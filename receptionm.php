@@ -14,32 +14,27 @@ if (!isset($_SESSION['username'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reception de marchandises</title>
     <link rel="stylesheet" href="accstyle.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
     <script>
-        // Fonction pour ajouter une nouvelle ligne au tableau
         function addNewRow() {
-            const table = document.getElementById('articleTable'); // Récupère le tableau
-            const newRow = table.insertRow(); // Insère une nouvelle ligne
-            
-            // Crée des cellules éditables pour chaque colonne
+            const table = document.getElementById('articleTable');
+            const newRow = table.insertRow();
             for (let i = 0; i < 7; i++) {
                 const cell = newRow.insertCell(i);
-                cell.contentEditable = true; // Permet l'édition des cellules
+                cell.contentEditable = true;
             }
-            // Ajoute les boutons "Modifier" et "Supprimer" à la dernière cellule
             newRow.insertCell(7).innerHTML = `
-                <button onclick="alert('Modifier cet article')">Modifier</button>
-                <button onclick="deleteRow(this)">Supprimer</button>
+                <button class="btn-modifier" onclick="alert('Modifier cet article')"><i class="bi bi-pencil"></i></button>
+                <button class="btn-supprimer" onclick="deleteRow(this)"><i class="bi bi-trash"></i></button>
             `;
         }
 
-        // Fonction pour supprimer une ligne
         function deleteRow(button) {
-            button.parentNode.parentNode.remove(); // Supprime la ligne correspondante
+            button.parentNode.parentNode.remove();
         }
 
-        // Fonction pour valider l'achat
         function validatePurchase() {
-            alert('Achat validé avec un total.'); // Alerte pour la validation
+            alert('Achat validé avec un total.');
         }
     </script>
 </head>
@@ -60,10 +55,9 @@ if (!isset($_SESSION['username'])) {
 <h1>Nom Fournisseur : <input type="text" id="fournisseur" /></h1>
 <h1>Date : <input type="date" id="date_achat" /></h1>
 
-<button onclick="addNewRow()">Ajouter</button> <!-- Bouton pour ajouter une nouvelle ligne -->
-
+<button class="btn-ajouter" onclick="addNewRow()">+</button>
 <table id="articleTable">
-    <tr>
+ <tr>
         <th>Numéro d'article</th>
         <th>Description d'article</th>
         <th>Quantité</th>
@@ -82,15 +76,14 @@ if (!isset($_SESSION['username'])) {
         <td contentEditable="true"></td>
         <td contentEditable="true"></td>
         <td>
-            <button onclick="alert('Modifier cet article')">Modifier</button> <!-- Bouton Modifier -->
-            <button onclick="deleteRow(this)">Supprimer</button> <!-- Bouton Supprimer -->
+            <button class="btn-modifier" onclick="alert('Modifier cet article')"> <i class="bi bi-pencil"></i></button>
+            <button class="btn-supprimer" onclick="deleteRow(this)">  <i class="bi bi-trash"></i></button>
         </td>
     </tr>
-    <!-- Vous pouvez ajouter d'autres lignes ici si nécessaire -->
 </table>
 
 <h1>Total : <input type="text" id="total" /></h1>
-<button onclick="validatePurchase()">Valider l'achat</button> <!-- Bouton pour valider l'achat -->
-    
+<button class="btn-valider" onclick="validatePurchase()">Valider l'achat</button>
+
 </body>
 </html>
