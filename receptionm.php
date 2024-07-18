@@ -23,6 +23,9 @@ if (!isset($_SESSION['username'])) {
                 const cell = newRow.insertCell(i);
                 cell.contentEditable = true;
             }
+            newRow.cells[2].innerHTML = `
+                <input type="number" value="1" min="1" class="quantity-input" />
+            `;
             newRow.insertCell(7).innerHTML = `
                 <button class="btn-modifier" onclick="alert('Modifier cet article')"><i class="bi bi-pencil"></i></button>
                 <button class="btn-supprimer" onclick="deleteRow(this)"><i class="bi bi-trash"></i></button>
@@ -30,8 +33,11 @@ if (!isset($_SESSION['username'])) {
         }
 
         function deleteRow(button) {
-            button.parentNode.parentNode.remove();
-        }
+            if (confirm("Êtes-vous sûr de vouloir supprimer cette ligne ?")) {
+        button.parentNode.parentNode.remove();
+    }
+}
+        
 
         function validatePurchase() {
             alert('Achat validé avec un total.');
@@ -70,7 +76,7 @@ if (!isset($_SESSION['username'])) {
     <tr>
         <td contentEditable="true"></td>
         <td contentEditable="true"></td>
-        <td contentEditable="true"></td>
+        <td contentEditable="true"> <input type="number" value="1" min="1" class="quantity-input" /></td>
         <td contentEditable="true"></td>
         <td contentEditable="true"></td>
         <td contentEditable="true"></td>

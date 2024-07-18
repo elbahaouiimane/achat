@@ -120,3 +120,15 @@ nav a:hover {
 .btn-valider:hover {
     background-color: rgb(47, 175, 47);
 }
+.quantity-input {
+    width: 40px; /* Largeur du champ */
+    padding: 5px; /* Espacement interne */
+    border: 1px solid #ccc; /* Bordure légère */
+    border-radius: 4px; /* Coins arrondis */
+    text-align: center; /* Centrer le texte */
+}
+
+.quantity-input:focus {
+    border-color: #4CAF50; /* Couleur de bordure lors du focus */
+    outline: none; /* Supprimer l'outline par défaut */
+}
