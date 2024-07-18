@@ -72,10 +72,4 @@ nav a:hover {
     background-color: rgba(10, 10, 10, 0.196); /* Trait transparent */
     margin-top: 10px;
 }
-.entete{
-    justify-content: space-between;
-    align-items: center;
-    display:flex;
-
-}
 

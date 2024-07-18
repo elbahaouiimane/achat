@@ -16,7 +16,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if ($result->num_rows > 0) {
         // Utilisateur trouvé
         $_SESSION['username'] = $user;
-        header("Location: acceuil.php");
+        header("Location: receptionm.php");
         exit();
     } else {
         // Utilisateur non trouvé
@@ -36,9 +36,9 @@ $conn->close();
 </head>
 
 <body>
+  
 <img src="image/logol.png" alt="Logo" class="logo">
-    
-    <form method="post" action="login_page.php">
+   <form method="post" action="login_page.php">
     <h2>Login</h2>
         <label for="username">Username</label>
         <input type="text" id="username" name="username" required>
