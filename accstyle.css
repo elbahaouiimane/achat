@@ -83,7 +83,7 @@ nav a:hover {
     font-size: 16px;
 }
 .btn-modifier {
-   /* background-color: black;*/
+    background-color: transparent;
     color: #000000;
     border: none;
    /* padding: 5px 9px;
@@ -93,7 +93,7 @@ nav a:hover {
     font-size: 16px;
 }
 .btn-supprimer {
-    /*background-color: black;*/
+    background-color: transparent;
     color: rgb(0, 0, 0);
     border: none;
    /* padding: 5px 9px;
