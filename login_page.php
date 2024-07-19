@@ -39,15 +39,15 @@ $conn->close();
   
 <img src="image/logol.png" alt="Logo" class="logo">
    <form method="post" action="login_page.php">
-    <h2>Login</h2>
-        <label for="username">Username</label>
+    <h2>Connexion</h2>
+        <label for="username">Nom d'utilisateur</label>
         <input type="text" id="username" name="username" required>
      
-        <label for="password">Password</label>
+        <label for="password">Mot de passe</label>
         <input type="password" id="password" name="password" required>
      
          <br>
-        <button type="submit">Connect</button>
+        <button type="submit">Se connecter</button>
         <?php if (isset($error)): ?>
         <p style="color: red;"><?php echo $error; ?></p>
     <?php endif; ?>
