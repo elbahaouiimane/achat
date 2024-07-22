@@ -1,7 +1,7 @@
 
 <?php
 $serverName = "serverName\\sqlexpress"; //serverName\instanceName
-$connectionInfo = array( "Database"=>"dbName", "UID"=>"sa", "PWD"=>"bpsmaroc");
+$connectionInfo = array( "Database"=>"dbName", "UID"=>"sa", "PWD"=>"");
 $conn = sqlsrv_connect( $serverName, $connectionInfo);
 
 if( $conn ) {
