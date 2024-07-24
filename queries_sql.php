@@ -1,13 +1,21 @@
-
 <?php
-$serverName = "serverName\\sqlexpress"; //serverName\instanceName
-$connectionInfo = array( "Database"=>"dbName", "UID"=>"sa", "PWD"=>"");
-$conn = sqlsrv_connect( $serverName, $connectionInfo);
+$serverName = "x.x.x"; // Replace with your SQL Server name or IP address
+$connectionOptions = array(
+    "Database" => "S", // Replace with your database name
+    "Uid" => "sa", // Replace with your SQL Server username
+    "PWD" => "b" // Replace with your SQL Server password
+);
 
-if( $conn ) {
-     echo "Connection established.<br />";
-}else{
-     echo "Connection could not be established.<br />";
-     die( print_r( sqlsrv_errors(), true));
+try {
+    $conn = new PDO("sqlsrv:Server=$serverName;Database={$connectionOptions['Database']}", $connectionOptions['Uid'], $connectionOptions['PWD']);
+    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    echo "Connected successfully";
+} catch (PDOException $e) {
+    echo "Connection failed: " . $e->getMessage();
 }
 ?>
+
+
+
+
+

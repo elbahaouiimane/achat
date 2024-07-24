@@ -45,6 +45,9 @@ if (!isset($_SESSION['username'])) {
     </script>
 </head>
 <body>
+    <?php
+require_once 'queries_sql.php';
+?>
 <header>
     <div class="nav-container">
         <img src="image/logol.png" alt="Logo" class="logo">
@@ -58,7 +61,7 @@ if (!isset($_SESSION['username'])) {
     <div class="divider"></div>
 </header>
 
-<h1>Nom Fournisseur : <input type="text" id="fournisseur" /></h1>
+<h1>Nom Fournisseur : <select name="fournisseur"> </select></h1>
 <h1>Date : <input type="date" id="date_achat" /></h1>
 
 <button class="btn-ajouter" onclick="addNewRow()">+</button>
@@ -69,7 +72,6 @@ if (!isset($_SESSION['username'])) {
         <th>Quantité</th>
         <th>Prix unitaire</th>
         <th>Magasin</th>
-        <th>Code UM</th>
         <th>Total brut (DI)</th>
         <th>Actions</th>
     </tr>
@@ -77,7 +79,6 @@ if (!isset($_SESSION['username'])) {
         <td contentEditable="true"></td>
         <td contentEditable="true"></td>
         <td contentEditable="true"> <input type="number" value="1" min="1" class="quantity-input" /></td>
-        <td contentEditable="true"></td>
         <td contentEditable="true"></td>
         <td contentEditable="true"></td>
         <td contentEditable="true"></td>
