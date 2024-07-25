@@ -17,20 +17,22 @@ if (!isset($_SESSION['username'])) {
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
     <script>
         function addNewRow() {
-            const table = document.getElementById('articleTable');
-            const newRow = table.insertRow();
-            for (let i = 0; i < 7; i++) {
-                const cell = newRow.insertCell(i);
-                cell.contentEditable = true;
-            }
-            newRow.cells[2].innerHTML = `
-                <input type="number" value="1" min="1" class="quantity-input" />
-            `;
-            newRow.insertCell(7).innerHTML = `
-                <button class="btn-modifier" onclick="alert('Modifier cet article')"><i class="bi bi-pencil"></i></button>
-                <button class="btn-supprimer" onclick="deleteRow(this)"><i class="bi bi-trash"></i></button>
-            `;
-        }
+    const table = document.getElementById('articleTable');
+    const newRow = table.insertRow();
+    
+    // Insérer les cellules avec contenu éditable
+    for (let i = 0; i < 6; i++) {
+        const cell = newRow.insertCell(i);
+        cell.contentEditable = true;
+    }
+    
+    // Insérer la cellule pour les boutons d'action
+    const actionCell = newRow.insertCell(6);
+    actionCell.innerHTML = `
+        <button class="btn-modifier" onclick="alert('Modifier cet article')"><i class="bi bi-pencil"></i></button>
+        <button class="btn-supprimer" onclick="deleteRow(this)"><i class="bi bi-trash"></i></button>
+    `;
+}
 
         function deleteRow(button) {
             if (confirm("Êtes-vous sûr de vouloir supprimer cette ligne ?")) {
@@ -45,9 +47,7 @@ if (!isset($_SESSION['username'])) {
     </script>
 </head>
 <body>
-    <?php
-require_once 'queries_sql.php';
-?>
+ 
 <header>
     <div class="nav-container">
         <img src="image/logol.png" alt="Logo" class="logo">
